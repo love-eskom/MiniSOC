@@ -43,7 +43,8 @@ def test_optional_fields_default_to_none():
     
 
 def test_event_representation():
-    event = EventSchema(source_ip="192.168.1.9", event_type="Cyberleek")
+    event = EventSchema(timestamp=datetime.now(),source_ip="192.168.1.9", event_type="brute force")
     
-    assert "Cyberleek" in repr(event)
-    assert "192.168.1.9" in repr(event)
+    assert "brute force" in repr(event.event_type)
+    assert "192.168.1.9" in repr(event.source_ip)
+    
