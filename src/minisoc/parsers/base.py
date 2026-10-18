@@ -19,7 +19,7 @@ class BaseParser(ABC):
     @abstractmethod
     
     
-    def parse_line(self, raw_line: str) -> EventSchema:
+    def parse_line(self, raw_line: str) -> EventSchema | None:
         """
             Parse a raw log line into a normalized EventSchema.
 
